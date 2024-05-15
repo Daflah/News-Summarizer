@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>News Summarizer</h1>
+        <form method="POST">
+            <label for="url">Masukkan URL berita:</label>
+            <input type="text" id="url" name="url" required>
+            <button type="submit">Summarize</button>
+        </form>
+        {% if summary %}
+            <h2>Title: {{ title }}</h2>
+            <h3>Summary:</h3>
+            <p>{{ summary }}</p>
+            <h3>Perbandingan jumlah kalimat (TextRank):</h3>
+            <p>{{ comparison }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
