@@ -28,14 +28,21 @@ def index():
             article.parse()
 
             title = article.title
-
+            
+            #Lowercasing
             soup = BeautifulSoup(article.html, 'html.parser')
             article_text = ' '.join([p.get_text() for p in soup.find_all('p')])
 
+            
+             # Menghilangkan tanda baca
             article_text = re.sub(r'[^\w\s]', '', article_text)
 
+            
+            # Menggunakan TextRank untuk meringkas
             textrank_summary = textrank_summarize(article_text, ratio=0.2)
 
+
+            # Tokenisasi
             original_sentences = nltk.sent_tokenize(article_text)
             num_original_sentences = len(original_sentences)
 
