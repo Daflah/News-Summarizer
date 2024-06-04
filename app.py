@@ -50,7 +50,7 @@ def index():
             num_textrank_summary_sentences = len(textrank_summary_sentences)
 
             summary = textrank_summary
-            comparison = f"{num_textrank_summary_sentences} / {num_original_sentences} = {num_textrank_summary_sentences / num_original_sentences}"
+        
 
         except Exception as e:
             summary = f"Error: {str(e)}"
