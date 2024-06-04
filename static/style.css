@@ -1,14 +1,9 @@
-/* style.css */
-
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
-    /* Uncomment the line below to use an image as the background */
-    /* background-image: url('path_to_your_image.jpg'); */
-    /* Uncomment the line below to use a repeating pattern as the background */
-    /* background-image: url('path_to_your_pattern.png'); */
-    background-size: cover; /* Membuat gambar menutupi seluruh latar */
-    background-position: center; /* Pusatkan gambar */
+    background-image: url('ASDSADA.jpg'); /* Absolute path to image */
+    background-size: cover; /* Make the image cover the entire background */
+    background-position: center; /* Center the image */
     background-repeat: no-repeat; /* No repeating for single image */
     margin: 0;
     padding: 0;
@@ -98,4 +93,25 @@ h2, h3 {
 p {
     font-size: 16px;
     line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center images with a margin */
+}
+
+/* Additional styles for GIFs */
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.gif-container img {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
